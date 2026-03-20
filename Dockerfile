@@ -11,10 +11,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiamos todo el contenido de la carpeta actual al contenedor
-COPY . .
+COPY . .|
 
 # Exponemos el puerto 8000 para FastAPI
 EXPOSE 8000
 
-# Comando para ejecutar la aplicación
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Cambia la última línea de tu Dockerfile a esta:
+CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port ${PORT:-10000}"]
