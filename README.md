@@ -19,5 +19,5 @@ Para levantar este proyecto en un entorno de desarrollo local, se requieren las 
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-usuario/GestionIA.git](https://github.com/tu-usuario/GestionIA.git)
-   cd GestionIA
+   git clone https://github.com/Benja1708/GestionIA.git
+cd GestionIA
